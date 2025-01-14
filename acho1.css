@@ -1,0 +1,856 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+.main {
+    height: 100vh; /* Equivalent to h-screen */
+    width: 100vw;  /* Equivalent to w-screen */
+}
+body{
+    scroll-behavior: smooth;
+}
+
+.page1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, black 40%, #5b21b6 70%, black);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.page1-container {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 7rem;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content-1 {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    background-color: white;
+    left: 0;
+}
+.nav-content-2 {
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    background-color: white;
+    left: 0;
+}
+.nav-content-3 {
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    background-color: white;
+    left: 0;
+}
+.nav-content-4 {
+    position: absolute;
+    z-index: 40;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    background-color: white;
+    left: 0;
+}
+
+.cont{
+    color: blue;
+}
+
+.left-navContent {
+    width: 25%;
+    height: 100%;
+    border: 2px solid rgba(156, 163, 175, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 112px;
+    padding-top: 40px;
+}
+.left-navContent h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+.left-navContent p {
+    color: rgba(156, 163, 175, 1);
+    font-weight: 300;
+    font-size: 14px;
+}
+.middle-navContent {
+    width: 45%;
+    height: 100%;
+    padding: 10px 8px 0 8px;
+}
+.middle-navContent h2 {
+    height: 10%;
+    text-transform: uppercase;
+    color: rgba(156, 163, 175, 1);
+    font-weight: 600;
+    font-size: 14px;
+}
+.coverage-options {
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+.coverage-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.width{
+    width: 100px;
+}
+.coverage-item {   
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 0, 128, 0.2);
+    padding: 8px;
+    border: 2px solid rgba(128, 0, 128, 0.2);
+    border-radius: 10px;
+
+}
+.coverage-item p {
+    color: black;
+    font-weight: 300;
+    font-size: 18px;
+}
+.right-navContent {
+    width: calc(100% - 45% - 25%);
+    height: 100%;
+    padding: 40px;
+    border: 2px solid rgba(156, 163, 175, 0.2);
+}
+
+
+.navigation {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.navigation a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.right {
+    display: flex;
+    gap: 1rem;
+}
+
+.login-btn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-btn:hover{
+    background-color: darkgreen;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background-color: #22c55e;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Head {
+    display: flex;
+    margin-top: 5rem;
+    height: 500px;
+    gap: 2.5rem;
+}
+
+.left-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.left-head h1 {
+    color: white;
+    font-size: 3.75rem;
+    font-weight: bold;
+}
+
+.insurance-types {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.items-left-head {
+    display: flex;
+    gap: 1rem;
+}
+
+.more-insurance {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.insurance-box {
+    height: 6rem;
+    border: 1px solid rgba(128, 90, 213, 0.3);
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 0.25rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.car-insurance {
+    width: 12rem;
+    background-image: url('https://acko-cms.ackoassets.com/Car_1_e2fcdc94fb.png');
+    color: white;
+    font-size: 14px;
+}
+
+.health-insurance {
+    width: 12rem;
+    background-image: url('https://acko-cms.ackoassets.com/Health_2_1_2b5a1dd93b.png');
+    color: white;
+    font-size: 14px;
+}
+
+.bike-insurance {
+    width: 8rem;
+    background-image: url('https://acko-cms.ackoassets.com/Bike_2_ed8d210f8b.png');
+    color: white;
+    font-size: 14px;
+}
+
+.life-insurance {
+    width: 8rem;
+    background-image: url('https://acko-cms.ackoassets.com/Life_60650901e7.png');
+    color: white;
+    font-size: 14px;
+}
+
+.travel-insurance {
+    width: 8rem;
+    background-image: url('https://acko-cms.ackoassets.com/travel_1_c919eebbd5.png');
+    color: white;
+}
+
+.right-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    padding-left: 5rem;
+    width: 66.67%;
+}
+
+.items-right-head {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.items-right-head h2:first-of-type {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #22c55e;
+    text-align: center;
+}
+
+.items-right-head h2:last-of-type {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+.page2 {
+    width: 100%;
+}
+
+.page2-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 7rem 7rem;
+}
+
+.page2-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.page2-left h1 {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.page2-left h2 {
+    color: #7c3aed; /* Purple */
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.page2-left p {
+    color: black;
+}
+
+.download-app-btn {
+    color: white;
+    background-color: #22c55e; /* Green */
+    width: 15rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.download-app-btn:hover{
+    background-color: darkgreen;
+    cursor: pointer;
+}
+
+.page2-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.img {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.img2 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.page3 {
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.page3-container {
+    min-height: 10%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 5rem 3rem;
+    border-top-left-radius: 4.5em;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    gap: 2rem;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    padding-right: 5rem;
+    border-radius: 4em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-page3 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.left-page3 h1 {
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.left-page3 h2 {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.left-page3 p {
+    color: #4B5563;
+    font-weight: 300;
+}
+
+.cta-btn-page3 {
+    color: #000;
+    background-color: #fff;
+    border: 0.625px solid #000;
+
+    width: 18rem;
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+
+.cta-btn-page3:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.right-page3 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right-page3 img {
+    width: 280;
+    height: 437.5;
+   
+}
+.page4 {
+    width: 100%;
+    height: 82vh;
+    background-image: url('https://acko-cms.ackoassets.com/acko_drive_banner_desktop_6ee7286472.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.page4-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5rem 5rem 3rem;
+}
+
+.page4-container img {
+    width: auto;
+    height: auto;
+}
+
+.page4-container h1 {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.page4-container p {
+    color: #D1D5DB; 
+    font-weight: 300;
+}
+
+.cta-btn-page4 {
+    color: white;
+    background-color: #10B981; 
+    width: 12rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.cta-btn-page4:hover {
+    background-color: #059669; 
+    cursor: pointer;
+}
+.page5 {
+    width: 100%;
+    height: 72vh;
+    background-image: url('https://acko-cms.ackoassets.com/Coupon_bg_desktop_0db5dbffb2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.page5-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5rem 10rem 3rem; /* Adjust the padding as necessary */
+}
+
+.content {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content h1 {
+    color: black;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.content .highlight {
+    color: #7e3af2; /* Purple-700 */
+}
+
+.content p {
+    color: #d1d5db; /* Zinc-400 */
+    font-weight: 300;
+}
+
+.mobilenumber {
+    display: flex;
+    /* background-color: white; */
+
+    /* flex-flow: column nowrap; */
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+    position: relative;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+.mobilenumberdiv{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    position: relative;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.mobilenumber input {
+    background-color: transparent;
+    color: black;
+    font-size: 0.875rem;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 0.25rem 0;
+    background-color: white;
+}
+.input-page5{
+    background-color: white;
+    border-radius: 0.75rem;;
+}
+.cta-btn-page5 {
+    color: white;
+    background-color: #10b981; 
+    width: 12rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #059669; /* Darker green for hover effect */
+    cursor: pointer;
+}
+
+
+  .page6 {
+    height: 60vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+  }
+  
+  .page6-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 7rem;
+  }
+  
+  .page6-left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 0 4rem;
+  }
+  
+  .page6-left h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .page6-left h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom, #a6a6a6, #121212);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .page6-left h2 span {
+    font-size: 1.5rem;
+  }
+  
+  .page6-left button {
+    color: white;
+    background-color: #38a169;
+    width: 15rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    border-radius: 0.75rem;
+  }
+  .page6-left button:hover{
+    background-color: darkgreen;
+    cursor: pointer;
+  }
+  
+  .page6-right {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .page6-right img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .page7 {
+    height: 25vh;
+    width: 100%;
+    background-color: #121212;
+    padding: 3rem 5rem;
+  }
+  
+  .page7-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    height: 100%;
+    width: 100%;
+    padding: 0 7rem;
+  }
+  
+  .page7-left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .page7-left h1 {
+    color: white;
+    font-weight: 600;
+  }
+  
+  .page7-left p {
+    color: #a1a1a1;
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+  
+  .page7-right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+  }
+  
+  .social-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: black;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .separator {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 7rem;
+  }
+  
+  .separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: #4a4a4a;
+    border: none;
+  }
+  
+
+  .page8 {
+    height: 63vh;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 8rem;
+  }
+  
+  .page8-container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  .column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .column h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: white;
+  }
+  
+  .column a {
+    color: #a1a1a1;
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  
+  .column a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .page9 {
+    height: 40vh;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 2.5rem 7rem;
+  }
+  
+  .insurance-box-page9 {
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1.25rem;
+    color: white;
+  }
+  
+  .insurance-inner {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 11rem; /* Adjust spacing as needed */
+  }
+  
+  h1 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+    margin: 0;
+  }
+  
+  i {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+
+  
